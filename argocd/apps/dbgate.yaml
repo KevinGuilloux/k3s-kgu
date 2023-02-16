@@ -12,7 +12,7 @@ spec:
   project: argocd
   source:
     path: dbgate
-    repoURL: https://github.com/BlueNc/k3s-fch.git
+    repoURL: https://github.com/KevinGuilloux/k3s-kgu.git
     targetRevision: HEAD
   syncPolicy:
     syncOptions:

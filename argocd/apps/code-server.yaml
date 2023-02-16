@@ -16,7 +16,7 @@ spec:
     path: ci/helm-chart
     helm:
       valueFiles:
-        - https://raw.githubusercontent.com/BlueNc/k3s-fch/main/code-server/values.yaml
+        - https://raw.githubusercontent.com/BlueNc/k3s-kgu/main/code-server/values.yaml
   syncPolicy:
     syncOptions:
       - CreateNamespace=true

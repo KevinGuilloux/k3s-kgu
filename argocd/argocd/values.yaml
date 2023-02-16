@@ -7,8 +7,8 @@ argo-cd:
   namespace: argocd
   configs:
     repositories:
-      k3s-fch:
-        url: https://github.com/BlueNc/k3s-fch.git
+      k3s-kgu:
+        url: https://github.com/KevinGuilloux/k3s-kgu.git
     params:
       server.insecure: true
   crds:
@@ -29,12 +29,12 @@ argo-cd:
       enabled: true
       ingressClassName: traefik
       hosts:
-        - argo-cd.k3s-fch.dev.gnc
+        - argo-cd.k3s-kgu.dev.gnc
       annotations:
         cert-manager.io/cluster-issuer: "ca-issuer"
         traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd,default-oauth2-proxy-redirect@kubernetescrd,default-oauth2-proxy-forward@kubernetescrd
       tls:
         - hosts:
-            - argo-cd.k3s-fch.dev.gnc
-          secretName: argo-cd-k3s-fch-dev-gnc
+            - argo-cd.k3s-kgu.dev.gnc
+          secretName: argo-cd-k3s-kgu-dev-gnc
       https: false
