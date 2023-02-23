@@ -1,5 +1,11 @@
 # k3s-kgu
 
+S'assurer que helm dispose de la configuration de kubernetes pour effectuer des actions dessus :
+
+```
+kubectl config view --raw > ~/.kube/config
+```
+
 ```
 cd ./argocd/argocd/
 helm dependency build
