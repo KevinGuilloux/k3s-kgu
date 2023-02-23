@@ -5,9 +5,9 @@ ingress:
   enabled: true
   ingressClassName: traefik
   hosts:
-    - host: code.k3s-kgu.dev.gnc
+    - host: 10.10.10.115
       paths:
-        - /
+        - /code
   annotations:
     cert-manager.io/cluster-issuer: "ca-issuer"
     traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd,default-oauth2-proxy-redirect@kubernetescrd,default-oauth2-proxy-forward@kubernetescrd
