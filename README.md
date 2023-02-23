@@ -6,14 +6,6 @@ S'assurer que helm dispose de la configuration de kubernetes pour effectuer des 
 kubectl config view --raw > ~/.kube/config
 ```
 
-Ajout de l'autorité de certification du repo registry :
-
-```
-sudo vim /usr/local/share/ca-certificates/CA.crt
-sudo update-ca-certificates
-```
-
-
 ```
 cd ./argocd/argocd/
 helm dependency build

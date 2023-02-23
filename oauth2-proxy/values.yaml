@@ -10,17 +10,14 @@ oauth2-proxy:
       scope = "user:email"
       github_users = "KevinGuilloux"
       cookie_domains = ".k3s-kgu.dev.gnc"
-      redirect_url = "https://10.10.10.115/auth/oauth2/callback"
-      whitelist_domains = "10.10.10.115"
-#      whitelist_domains = "*.k3s-kgu.dev.gnc"
+      redirect_url = "https://auth.k3s-kgu.dev.gnc/oauth2/callback"
+      whitelist_domains = "*.k3s-kgu.dev.gnc"
 
   ingress:
     enabled: true
     ingressClassName: traefik
     hosts:
-      - 10.10.10.115
-#      - auth.k3s-kgu.dev.gnc
-    path: /auth
+      - auth.k3s-kgu.dev.gnc
     annotations:
       cert-manager.io/cluster-issuer: "ca-issuer"
       traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd,default-auth-headers@kubernetescrd
