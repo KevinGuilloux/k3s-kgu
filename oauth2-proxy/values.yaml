@@ -8,7 +8,7 @@ oauth2-proxy:
       upstreams = [ "static://202" ]
       provider = "github"
       scope = "user:email"
-      github_users = "florentchevalier"
+      github_users = "KevinGuilloux"
       cookie_domains = ".k3s-kgu.dev.gnc"
       redirect_url = "https://auth.k3s-kgu.dev.gnc/oauth2/callback"
       whitelist_domains = "*.k3s-kgu.dev.gnc"
@@ -30,9 +30,9 @@ oauth2-proxy:
     enabled: false
 
   extraEnv:
-    - name: HTTP_PROXY
-      value: http://proxy-web.proxy-dmz.gnc:3128
-    - name: HTTPS_PROXY
-      value: http://proxy-web.proxy-dmz.gnc:3128
+#    - name: HTTP_PROXY
+#      value: http://proxy-web.proxy-dmz.gnc:3128
+#    - name: HTTPS_PROXY
+#      value: http://proxy-web.proxy-dmz.gnc:3128
     - name: NO_PROXY
       value: code-server
