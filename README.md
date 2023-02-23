@@ -1,11 +1,13 @@
 # k3s-kgu
 
-```cd ./argocd/argocd/
+```
+cd ./argocd/argocd/
 helm dependency build
 cd ../..
 cd ./argocd/argocd-apps/
 helm dependency build
-cd ../..```
+cd ../..
+
 
 
 helm install argocd ./argocd/argocd --namespace argocd --create-namespace
