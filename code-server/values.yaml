@@ -5,7 +5,7 @@ ingress:
   enabled: true
   ingressClassName: traefik
   hosts:
-    - host: code.k3s-kgu.dev.gnc
+    - host: code.k3s-kgu.gnc.recif.nc
       paths:
         - /
   annotations:
@@ -13,7 +13,7 @@ ingress:
     traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd,default-oauth2-proxy-redirect@kubernetescrd,default-oauth2-proxy-forward@kubernetescrd
   tls:
     - hosts:
-        - code.k3s-kgu.dev.gnc
+        - code.k3s-kgu.gnc.recif.nc
       secretName: code-k3s-kgu-dev-gnc
 
 extraVars:

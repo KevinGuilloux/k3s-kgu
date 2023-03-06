@@ -20,7 +20,7 @@ helm install argocd ./argocd/argocd --namespace argocd --create-namespace
 helm install argocd-apps ./argocd/argocd-apps --namespace argocd
 
 
-https://argo-cd.k3s-kgu.dev.gnc/
+https://argo-cd.k3s-kgu.gnc.recif.nc/
 user : admin
 password : `kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 -d && echo`
 

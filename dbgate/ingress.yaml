@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-  - host: dbgate.k3s-kgu.dev.gnc
+  - host: dbgate.k3s-kgu.gnc.recif.nc
     http:
       paths:
       - path: /
@@ -20,5 +20,5 @@ spec:
               number: 80
   tls:
   - hosts:
-    - dbgate.k3s-kgu.dev.gnc
+    - dbgate.k3s-kgu.gnc.recif.nc
     secretName: dbgate-k3s-kgu-dev-gnc

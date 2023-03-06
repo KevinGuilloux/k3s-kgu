@@ -29,12 +29,12 @@ argo-cd:
       enabled: true
       ingressClassName: traefik
       hosts:
-        - argo-cd.k3s-kgu.dev.gnc
+        - argo-cd.k3s-kgu.gnc.recif.nc
       annotations:
         cert-manager.io/cluster-issuer: "ca-issuer"
         traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd,default-oauth2-proxy-redirect@kubernetescrd,default-oauth2-proxy-forward@kubernetescrd
       tls:
         - hosts:
-            - argo-cd.k3s-kgu.dev.gnc
+            - argo-cd.k3s-kgu.gnc.recif.nc
           secretName: argo-cd-k3s-kgu-dev-gnc
       https: false

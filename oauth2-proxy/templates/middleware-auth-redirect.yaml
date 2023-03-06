@@ -6,4 +6,4 @@ metadata:
 spec:
   redirectRegex:
     regex: ^https://(.*)/oauth2/start
-    replacement: https://auth.k3s-kgu.dev.gnc/oauth2/start
+    replacement: https://auth.k3s-kgu.gnc.recif.nc/oauth2/start
