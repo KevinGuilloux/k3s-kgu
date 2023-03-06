@@ -1,4 +1,5 @@
-./oauth2-proxy/templates/secret.yaml
+Créer le fichier suivant ./oauth2-proxy/templates/secret.yaml
+
 ```
 apiVersion: v1
 kind: Secret
@@ -10,6 +11,8 @@ data:
   cookie-secret: <openssl rand -base64 32 | head -c 32 | base64>
   client-secret: <echo -n "****" | base64>
   client-id: <echo -n "****" | base64>
-  ```
+```
 
+```
   kubeseal -f ./oauth2-proxy/templates/secret.yaml --format yaml > ./oauth2-proxy/templates/secret-sealed.yaml
+ ```
