@@ -24,7 +24,7 @@ oauth2-proxy:
     tls:
       - hosts:
           - auth.k3s-kgu.gnc.recif.nc
-        secretName: auth-k3s-kgu-dev-gnc
+        secretName: auth-k3s-kgu-gnc-recif-nc
 
   redis:
     enabled: false
